@@ -1,0 +1,18 @@
+.auth-form .v-card {
+  width: 400px;
+}
+
+a {
+  cursor: pointer;
+}
+
+a:hover {
+  color: rgb(138, 171, 208);
+}
+
+.loader {
+  height: 80dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
