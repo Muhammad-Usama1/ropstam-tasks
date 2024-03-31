@@ -57,15 +57,16 @@ const email = ref('')
 const password = ref('')
 const visible = ref(false)
 
+// Validation
 const isFormValid = computed(() => {
     return email.value.trim() !== '' && password.value.trim() !== '' && isValidEmail(email.value)
 })
-
 const isValidEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     return emailRegex.test(email)
 }
 
+// Sign
 const signin = async () => {
     try {
         loading.value = true
@@ -87,7 +88,7 @@ const signin = async () => {
         snackbar.value = true
     }
 }
-
+// Switch
 const signup = () => {
     router.push({ name: 'signup' })
 }

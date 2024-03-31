@@ -108,7 +108,7 @@ const headers = [
     { title: 'createdAt', key: 'formattedCreatedAt' },
     { title: 'Actions', key: 'actions', sortable: false },
 ];
-// Data format
+// Date format
 const formatCreatedAt = (date) => {
     return moment(date).format('YYYY-MM-DD HH:mm:ss'); // Customize the format as needed
 };

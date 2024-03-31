@@ -26,12 +26,12 @@ const recordStore = useUserList()
 const loading = ref(true)
 const dashboard=ref([])
 
+// Mounting data
 onMounted(async () => {
     await recordStore.vehicleRecord()
     dashboard.value=recordStore.registeredVehicles
     loading.value = false
 })
-// onMounted(fetchrecord);
 </script>
 
 <style scoped>

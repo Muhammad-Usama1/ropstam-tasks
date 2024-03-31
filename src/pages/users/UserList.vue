@@ -26,16 +26,14 @@
 </template>
 <script setup>
 import { ref, onMounted,computed } from 'vue'
-
 import { useUserList } from "@/stores/users/userList"
 const userListStore = useUserList()
+
+// General
 const users = ref([])
 const loading = ref(true)
-onMounted(async () => {
-    await userListStore.fetchUsers()
-    users.value = userListStore.users
-    loading.value = false
-})
+
+// TableW
 const search = ref('')
 const headers = ref(
     [
@@ -48,6 +46,14 @@ const headers = ref(
         { title: 'Email', key: 'email' },
     ],
 )
+
+// Mounting User
+onMounted(async () => {
+    await userListStore.fetchUsers()
+    users.value = userListStore.users
+    loading.value = false
+})
+
 
 
 // Pagination

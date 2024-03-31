@@ -20,7 +20,6 @@ export const useUserList = defineStore({
     async vehicleRecord() {
       try {
         const response = await axios.get(`${baseUrl}/user/dashboard`);
-        console.log(response.data);
         this.registeredVehicles = response.data.dashboard;
       } catch (e) {
         console.log(e);
